@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20_210_413_140_801) do
     t.string 'status'
   end
 
+<<<<<<< HEAD
   create_table 'comments', force: :cascade do |t|
     t.string 'title'
     t.text 'body'
@@ -27,6 +28,20 @@ ActiveRecord::Schema.define(version: 20_210_413_140_801) do
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'status'
     t.index ['article_id'], name: 'index_comments_on_article_id'
+=======
+  create_table "comments", force: :cascade do |t|
+<<<<<<< HEAD
+    t.string "commenter"
+=======
+    t.string "title"
+>>>>>>> 19c167a70a6a75e30a463f1faf146855b9a9a1dc
+    t.text "body"
+    t.integer "article_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.index ["article_id"], name: "index_comments_on_article_id"
+>>>>>>> fec4b077345a1a54a826449a1dc59bc3fcf36bd1
   end
 
   add_foreign_key 'comments', 'articles'
