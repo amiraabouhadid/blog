@@ -21,7 +21,11 @@ ActiveRecord::Schema.define(version: 2021_04_13_140801) do
   end
 
   create_table "comments", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "commenter"
+=======
+    t.string "title"
+>>>>>>> 19c167a70a6a75e30a463f1faf146855b9a9a1dc
     t.text "body"
     t.integer "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
